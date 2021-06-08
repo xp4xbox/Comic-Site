@@ -1,9 +1,4 @@
 ## Comic-Site
 
-A Node.js server which displays comic strips using the xkcd API
-
-### Config
-
-Run `npm install` in a command window to install the modules.
-
+A Node.js server which displays comic strips using the xkcd API deloyed at https://ancient-mountain-21408.herokuapp.com/comic/453.
 
