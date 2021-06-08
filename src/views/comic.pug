@@ -1,0 +1,29 @@
+html(lang="en")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", type="text/css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+
+    script(src="/script/comicScript.js", type="module")
+
+    head
+        title Comic Strips
+    body
+        style
+            include style.css
+
+        .titleTxt
+            text #[strong #{data.title}]
+
+        .container
+            img(src=data.img)
+
+        .dateTxt
+            text #{data.day}/#{data.month}/#{data.year}
+
+        div(class="container", id="containerBtns")
+
+        .viewsTxt
+            if views === 1
+                text #[strong 1 view]
+            else
+                text #[strong #{views} views]
+
