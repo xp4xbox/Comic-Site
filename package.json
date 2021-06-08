@@ -1,0 +1,25 @@
+{
+  "name": "comic-site",
+  "version": "1.0.0",
+  "description": "A server which will display comic strips using the xkcd API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xp4xbox/Comic-Site.git"
+  },
+  "author": "Nicolas Hawrysh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xp4xbox/Comic-Site/issues"
+  },
+  "homepage": "https://github.com/xp4xbox/Comic-Site#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
