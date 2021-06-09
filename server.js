@@ -4,14 +4,17 @@ const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 const app = express();
 
+// for heroku config
 let port = process.env.PORT;
 
 if (port == null || port === "") {
 	port = 3000;
 }
 
+// max comics in the xkcd api
 const MAX_COMIC_RANGE = 2473;
 
+// array of javascript objects to store the index of a comic and the amount of times it has been viewed
 let comicsViewed = [];
 
 app.set("view engine", "pug");
@@ -21,11 +24,14 @@ app.listen(port, () => {
     console.log("Server listening at " + port);
 });
 
+// redirect to a random comic if home page is requested
 app.get("/", (req, res) => {
     res.redirect("/comic/" + helper.random(0, MAX_COMIC_RANGE));
 });
 
 app.get("/comic", (req, res) => {
+
+    // query request which will send the number of comics
     if (req.query.hasOwnProperty("comicCount") && req.query.comicCount === "true") {
         res.status(200).send(MAX_COMIC_RANGE.toString());
     }
